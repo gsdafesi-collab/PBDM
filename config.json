@@ -1,0 +1,13 @@
+{
+  "titulo": "Publicar Dispensa",
+  "url_api": "api/salvar.php",
+  "mensagens": {
+    "processando": "🚀 Processando e enviando...",
+    "sucesso": "✅ Sucesso! Planilha atualizada.",
+    "erro_tamanho": "⚠️ Arquivo muito grande! Máximo permitido: 5MB.",
+    "erro_geral": "❌ Erro no envio. Tente novamente.",
+    "sucesso_alert": "Dispensa Publicada com Sucesso!",
+    "alerta_parcial_topo": "⚠️ ATENÇÃO: Dispensa PARCIAL! Compareça ao expediente conforme as orientações do comandante do ESI.",
+    "alerta_total_topo": "⚠️ ATENÇÃO: Você deve apresentar sua dispensa na seção ainda hoje. O descumprimento desta orientação resultará em sanção disciplinar, conforme as orientações do comandante do ESI."
+  }
+}

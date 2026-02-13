@@ -1,0 +1,151 @@
+:root {
+    --primary: #1a3a5a;
+    --primary-hover: #2c527a;
+    --success: #28a745;
+    --danger: #dc3545;
+    --background: #eef2f5;
+    --surface: #ffffff;
+    --text-dark: #333333;
+    --border: #bdc3c7;
+    --radius: 8px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+    background-color: var(--background);
+    color: var(--text-dark);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* Header e Títulos */
+header { margin-bottom: 30px; }
+.header-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 25px; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+}
+
+h1, h2 { 
+    color: var(--primary); 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+/* Cartões de Estatísticas (Stats) */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.card-stat {
+    background: var(--surface); 
+    padding: 20px; 
+    border-radius: var(--radius);
+    border-top: 5px solid var(--primary); 
+    box-shadow: var(--shadow);
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+}
+
+.icon-box { 
+    width: 50px; height: 50px; 
+    border-radius: 50%; 
+    display: grid; place-items: center; 
+    font-size: 24px; 
+    background: #f0f4f8;
+}
+
+.stat-info p { font-size: 12px; font-weight: bold; color: #666; text-transform: uppercase; }
+.stat-info h3 { font-size: 28px; color: var(--primary); }
+
+/* Área de Filtros */
+.filtros-area { 
+    background: var(--surface); 
+    padding: 20px; 
+    border-radius: var(--radius); 
+    margin-bottom: 25px; 
+    display: flex; 
+    gap: 12px; 
+    box-shadow: var(--shadow);
+}
+.filtros-area input, .filtros-area select { 
+    padding: 12px; 
+    border: 1px solid var(--border); 
+    border-radius: 6px; 
+    flex: 1; 
+    font-size: 14px;
+}
+.filtros-area input:focus { border-color: var(--primary); outline: none; }
+
+/* Tabela (Padrão Global) */
+.table-wrapper { 
+    background: var(--surface); 
+    border-radius: var(--radius); 
+    box-shadow: var(--shadow); 
+    overflow-x: auto; 
+}
+table { width: 100%; border-collapse: collapse; min-width: 700px; }
+th { 
+    background: var(--primary); 
+    color: white; 
+    padding: 15px; 
+    font-size: 13px; 
+    text-align: left; 
+    text-transform: uppercase;
+}
+td { padding: 14px 15px; border-bottom: 1px solid #eee; font-size: 14px; }
+tr:hover { background-color: #f9fbff; }
+
+/* Badges e Tags */
+.turma-tag { background: #e9ecef; color: #495057; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; }
+.badge-dias { background: #e3f2fd; color: #0d47a1; padding: 5px 12px; border-radius: 20px; font-weight: bold; border: 1px solid #bbdefb; }
+.link-nome { color: var(--primary); text-decoration: none; cursor: pointer; font-weight: 600; }
+.link-nome:hover { text-decoration: underline; }
+
+/* Botões */
+.botao { 
+    padding: 10px 18px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    color: white; 
+    transition: 0.2s;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.botao-verde { background: var(--success); }
+.botao-azul { background: var(--primary); }
+.botao-vermelho { background: var(--danger); }
+.botao-roxo { background: #6f42c1; }
+.botao:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* Modais */
+.modal-overlay { 
+    display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); 
+    z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(3px); 
+}
+.modal-overlay.ativo { display: flex; }
+.modal-conteudo { 
+    background: white; 
+    border-radius: 12px; 
+    width: 95%; max-width: 450px; 
+    padding: 30px; 
+    border-top: 8px solid var(--primary);
+}
+
+.info-box { background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 15px; }
+
+@media (max-width: 768px) {
+    .filtros-area { flex-direction: column; }
+    .header-top { flex-direction: column; text-align: center; }
+}
