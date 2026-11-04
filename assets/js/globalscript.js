@@ -89,7 +89,7 @@ function calcDatas() {
         }
         
         if (valTipo === 'Parcial') {
-            if(txtApresentacao) txtApresentacao.innerHTML = `<span style="color:#856404">Ver orientação abaixo</span>`;
+            if(txtObs) txtObs.innerHTML = `<span style="color:#856404">Ver orientação abaixo</span>`;
             
             if(alertaTipoPosicao) {
                 alertaTipoPosicao.innerHTML = `
@@ -103,8 +103,8 @@ function calcDatas() {
             
             let dtApres = new Date(dtTermino);
             dtApres.setDate(dtTermino.getDate() + 1);
-            if(txtApresentacao) {
-                txtApresentacao.innerHTML = `<span style="color: #28a745; font-weight: bold;">${dtApres.toLocaleDateString('pt-BR')}</span>`;
+            if(txtObs) {
+                txtObs.innerHTML = `<span style="color: #28a745; font-weight: bold;">${dtApres.toLocaleDateString('pt-BR')}</span>`;
             }
         }
         
